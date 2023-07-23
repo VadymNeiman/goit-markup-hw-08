@@ -1,0 +1,22 @@
+ 
+ .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+ 
+   &__title {
+      font-size: 36px;
+      line-height: 1.16;
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--main-text-color,black);
+   }
+   &__subtitle {
+      line-height: 1.14;
+      text-transform: uppercase;
+      color: var(--main-text-color,black);
+   }
+   &__text {
+      line-height: 1.71;
+      color: var(--second-text-color,grey);
+   }
+}

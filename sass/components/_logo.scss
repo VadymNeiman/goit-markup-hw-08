@@ -1,0 +1,10 @@
+.logo {
+    font-family: var(--logo-font), sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--logo-text-color, black);
+
+    &_accent {
+      color: var(--accent-color, #2196F3);
+    } 
+ }

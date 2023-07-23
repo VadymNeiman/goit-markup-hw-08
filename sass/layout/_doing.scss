@@ -1,0 +1,24 @@
+.doing {
+    display: flex;
+    gap: 30px;
+
+    &__item {
+      position: relative;
+    }
+ }
+ 
+
+ 
+ .section__subtitle_positioned-translucent {
+    /* line-height: 1.14; */
+    /* text-transform: uppercase; */
+    color: var(--light-text-color,white);
+    background-color: rgba(47, 48, 58, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+ }

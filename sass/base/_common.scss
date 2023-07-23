@@ -1,0 +1,35 @@
+body { 
+    font-family: var(--main-font), sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color,black);
+    background-color: var(--main-background-color, white);
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p {
+   margin-top: 0;
+   margin-bottom: 0;
+ }
+
+ ul {
+   margin-top: 0;
+   margin-bottom: 0;
+   padding-left: 0;
+ }
+ img {
+   display: block;
+   max-width: 100%;
+ }
+ .no-link-underline {
+    text-decoration: none;
+ } 
+ 
+ .no-list-marker { 
+    list-style-type: none;
+ }
