@@ -98,7 +98,7 @@ img {
 .logo_accent {
   color: var(--accent-color, #2196F3);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .logo {
     font-size: 26px;
   }
@@ -339,9 +339,10 @@ img {
             align-items: center;
     gap: 10px;
     height: 16px;
+    font-size: 12px;
     font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    line-height: normal;
+    letter-spacing: 0.24px;
     color: var(--second-text-color, grey);
     fill: var(--second-text-color, grey);
     -webkit-transition-property: color, fill;
@@ -356,6 +357,16 @@ img {
     fill: currentColor;
   }
 }
+.link-contact__icon-envelope {
+  width: 14px;
+  height: 10px;
+}
+
+.link-contact__icon-smartphone {
+  width: 10px;
+  height: 14px;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .contact-menu-list__item:first-child {
     margin-bottom: 10px;
@@ -373,6 +384,19 @@ img {
         -ms-flex-align: center;
             align-items: center;
     gap: 50px;
+  }
+  .link-contact {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  .link-contact__icon-envelope {
+    width: 16px;
+    height: 12px;
+  }
+  .link-contact__icon-smartphone {
+    width: 10px;
+    height: 16px;
   }
 }
 .hero-section {
