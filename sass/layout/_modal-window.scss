@@ -3,9 +3,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    
-    min-height: 580px;
-    min-width: 528px;
+
+    min-height: 609px;
+    width: 450px;
     border-radius: 4px;
     background: #FFF;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -14,11 +14,22 @@
 
     .backdrop.is-hidden & {
       transform: translate(-50%, -50%) scale(0.01);
+      
+   }
+
+   @media screen and (max-width: 480px) {
+      width: 100%;
+      // min-width: 320px;
+      
+   }
+
+   @media screen and (min-width: 1200px) {
+        min-height: 580px;
+        width: 528px;
    }
 
    &__title {
       font-size: 20px;
-      line-height: normal;
       display: block;
       text-align: center;
       color: var(--main-text-color, black);
@@ -27,7 +38,6 @@
    
    &__subtitle {
       font-size: 12px;
-      line-height: normal;
       letter-spacing: 0.12px;
       color: var(--second-text-color, grey);
       margin-bottom: 4px;
@@ -86,8 +96,13 @@
  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &::placeholder {
-   font-size: 12px;
+   font-size: 14px;
+   // font-size: 12px;
    color: rgba(117, 117, 117, 0.50);
+
+   @media screen and (min-width: 1200px) {
+      font-size: 12px;
+   }
   }
 
   &:focus {
@@ -99,14 +114,22 @@
 .modal__checkbox-text {
  position: relative;
  display: flex;
+
+    flex-wrap: wrap;
+
  align-items: center;
  height: 24px;
  padding-left: 36px;
- font-size: 14px;
+ font-size: 12px;
+//  font-size: 14px;
  line-height: 1.4;
  letter-spacing: 0.42px;
  color: var(--second-text-color, grey);
  margin-bottom: 30px;
+
+ @media screen and (min-width: 1200px) {
+   font-size: 14px;
+ }
 }
 
 %modal__checkbox-icon {
@@ -133,12 +156,12 @@
       opacity: 1;
      }
 
-
 } 
 
 .modal__checkbox-link {
  color: var(--accent-color, blue);
 }
+
 .modal__action-btn {
  padding: 10px 52px;
  display: block;
