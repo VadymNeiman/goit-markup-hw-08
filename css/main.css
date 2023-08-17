@@ -94,7 +94,7 @@ img {
 .logo {
   font-family: var(--logo-font), sans-serif;
   font-size: 24px;
-  line-height: 1.2;
+  letter-spacing: 0.72px;
   color: var(--logo-text-color, black);
 }
 .logo_accent {
@@ -103,6 +103,7 @@ img {
 @media screen and (min-width: 1200px) {
   .logo {
     font-size: 26px;
+    letter-spacing: 0.78px;
   }
 }
 
@@ -176,19 +177,17 @@ img {
   padding-bottom: 60px;
 }
 .section__title {
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  letter-spacing: 0.84px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--main-text-color, black);
 }
 .section__subtitle {
-  line-height: 1.14;
   text-transform: uppercase;
   color: var(--main-text-color, black);
 }
 .section__text {
-  line-height: 1.71;
   color: var(--second-text-color, grey);
 }
 
@@ -196,6 +195,11 @@ img {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+  .section__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    letter-spacing: 1.08px;
   }
 }
 .backdrop {
@@ -310,8 +314,7 @@ img {
   }
   .nav-menu-list__link {
     font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.28px;
     color: var(--main-text-color, black);
     display: block;
     padding-top: 32px;
@@ -359,6 +362,7 @@ img {
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.24px;
+    letter-spacing: 0.24px;
     color: var(--second-text-color, grey);
     fill: var(--second-text-color, grey);
     -webkit-transition-property: color, fill;
@@ -403,8 +407,7 @@ img {
   }
   .link-contact {
     font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.28px;
   }
   .link-contact__icon-envelope {
     width: 16px;
@@ -481,7 +484,7 @@ img {
 .mobile-menu__nav-link_current {
   color: var(--accent-color, #2196F3);
 }
-.mobile-menu__nav-link::after {
+.mobile-menu__nav-link_current::after {
   content: "";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -491,15 +494,12 @@ img {
   position: absolute;
   bottom: -3px;
   border-radius: 2px;
-  background-color: trarnsparent;
+  background-color: var(--accent-color, blue);
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu__nav-link:hover, .mobile-menu__nav-link:focus {
   color: var(--accent-color, #2196F3);
-}
-.mobile-menu__nav-link:hover::after, .mobile-menu__nav-link:focus::after {
-  background-color: var(--accent-color, blue);
 }
 
 .mobile-menu__nav-item:not(:last-child) {
@@ -634,14 +634,17 @@ img {
     max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
-    letter-spacing: 0.06em;
+    letter-spacing: 2.64px;
   }
 }
 .advant__subtitle {
   margin-bottom: 10px;
   text-align: center;
   font-size: 14px;
-  line-height: normal;
+}
+
+.advant__text {
+  line-height: 1.71;
 }
 
 @media screen and (max-width: 767px) {
@@ -746,11 +749,15 @@ img {
   padding-top: 30px;
   padding-bottom: 24px;
 }
+@media screen and (min-width: 1200px) {
+  .team__desription {
+    padding-bottom: 30px;
+  }
+}
 
 .section__subtitle_positioned {
   font-weight: 500;
   /* font-size: 16px; */
-  line-height: 1.19;
   text-transform: none;
   text-align: center;
   margin-bottom: 10px;
@@ -934,7 +941,6 @@ img {
 
 .footer-social__title {
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 0.42px;
   text-transform: uppercase;
   color: var(--light-text-color, white);
@@ -1092,87 +1098,6 @@ img {
   background: var(--accent-color, #2196F3);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 50px;
-}
-.gallery__card {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.gallery__foto {
-  position: relative;
-  width: 370px;
-  height: 294px;
-  overflow: hidden;
-}
-.gallery__link {
-  -webkit-transition-property: -webkit-box-shadow;
-  transition-property: -webkit-box-shadow;
-  transition-property: box-shadow;
-  transition-property: box-shadow, -webkit-box-shadow;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.gallery__link:hover, .gallery__link:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.gallery__card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 62px 24px;
-  background-color: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translatey(100%);
-          transform: translatey(100%);
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-}
-.gallery__link:hover .gallery__card-overlay, .gallery__link:focus .gallery__card-overlay {
-  -webkit-transform: translatey(0);
-          transform: translatey(0);
-}
-.gallery__overlay-description {
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  text-align: left;
-  color: var(--light-text-color, white);
-}
-.gallery__card-description {
-  padding: 20px 24px;
-  border-left: 1px solid #EEEEEE;
-  border-right: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
-}
-.gallery__card-title {
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--main-text-color, black);
-}
-.gallery__card-filter-type {
-  font-size: 16px;
-  line-height: 1.88;
-  color: var(--second-text-color, grey);
-  margin-top: 4px;
 }
 
 .modal {

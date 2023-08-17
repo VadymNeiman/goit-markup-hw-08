@@ -24,12 +24,16 @@
 .team__desription {
     padding-top: 30px;
     padding-bottom: 24px;
+
+    @media screen and (min-width:1200px) {
+        padding-bottom: 30px;
+    }
 }
 
 .section__subtitle_positioned {
     font-weight: 500;
     /* font-size: 16px; */
-    line-height: 1.19;
+    // line-height: 1.19;
     text-transform: none;
     text-align: center;
     margin-bottom: 10px;
