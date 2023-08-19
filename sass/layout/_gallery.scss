@@ -1,6 +1,110 @@
+.gallery {
+    margin-top: 40px;
 
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;  
+    }
 
+    &__card {
+        //       flex-basis: calc((100% - 2 * 30px) / 3);
+        display: flex;  
+        
+        // @media screen and (min-width:768px) {
+        //     flex-basis: calc((100% - 1 * 30px) / 2);
+        // }
+    }
+    @media screen and (max-width: 767px) {
+        &__card:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
 
+    &__foto {
+        position: relative;
+        width: 450px;
+        height: 294px;
+        overflow: hidden;
+
+        @media screen and (min-width:768px) {
+            width: 354px;
+            height: 294px;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 370px;
+            height: 294px;
+        }
+    }
+
+   &__link {
+      transition-property: box-shadow;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
+      &:hover,
+      &:focus {
+         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+         }
+   }
+
+   &__card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 78px 24px;
+      background-color: rgba(33, 150, 243, 0.90);
+      transform: translatey(100%);
+   
+      transition: transform 250ms ease-in-out;
+   
+      .gallery__link:hover &,
+      .gallery__link:focus &  {
+         transform: translatey(0);
+      }
+
+      @media screen and (min-width:768px) {
+        padding: 48px 24px;
+      }
+      @media screen and (min-width:1200px) {
+        padding: 62px 24px;
+      }
+   }
+
+   &__overlay-description {
+      font-size: 18px;
+      line-height: 1.56;
+      letter-spacing: 0.54px;
+      text-align: left;
+      color: var(--light-text-color,white);
+   }
+
+   &__card-description {
+      padding: 20px 24px;
+      border-left: 1px solid #EEEEEE;
+      border-right: 1px solid #EEEEEE;
+      border-bottom: 1px solid #EEEEEE;
+   }
+
+   &__card-title {
+      font-size: 18px;
+      line-height: 2;
+      letter-spacing: 1.08px;
+      color: var(--main-text-color,black);
+   }
+   
+   &__card-filter-type {
+      font-size: 16px;
+      line-height: 1.88;
+      letter-spacing: 0.48px;
+      color: var(--second-text-color,grey);
+      margin-top: 4px;
+   }
+ 
+}
 
 
 

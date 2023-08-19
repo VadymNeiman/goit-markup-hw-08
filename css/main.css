@@ -251,9 +251,13 @@ img {
 }
 
 .header {
-  padding-top: 10px;
-  padding-bottom: 10px;
   border-bottom: 1px solid #ECECEC;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .header__container {
@@ -425,6 +429,7 @@ img {
   width: 100vw;
   height: 100vh;
   background-color: var(--main-background-color, white);
+  outline: auto;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 999;
@@ -1068,10 +1073,21 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 8px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px 8px;
+}
+@media screen and (max-width: 767px) {
+  .filter-buttons {
+    max-width: 326px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter-buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .filter-buttons__item {
   font-family: inherit;
@@ -1098,6 +1114,117 @@ img {
   background: var(--accent-color, #2196F3);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.gallery {
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+.gallery__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .gallery__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.gallery__foto {
+  position: relative;
+  width: 450px;
+  height: 294px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .gallery__foto {
+    width: 354px;
+    height: 294px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__foto {
+    width: 370px;
+    height: 294px;
+  }
+}
+.gallery__link {
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery__link:hover, .gallery__link:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.gallery__card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 78px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  -webkit-transform: translatey(100%);
+          transform: translatey(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+.gallery__link:hover .gallery__card-overlay, .gallery__link:focus .gallery__card-overlay {
+  -webkit-transform: translatey(0);
+          transform: translatey(0);
+}
+@media screen and (min-width: 768px) {
+  .gallery__card-overlay {
+    padding: 48px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__card-overlay {
+    padding: 62px 24px;
+  }
+}
+.gallery__overlay-description {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.54px;
+  text-align: left;
+  color: var(--light-text-color, white);
+}
+.gallery__card-description {
+  padding: 20px 24px;
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+}
+.gallery__card-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 1.08px;
+  color: var(--main-text-color, black);
+}
+.gallery__card-filter-type {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.48px;
+  color: var(--second-text-color, grey);
+  margin-top: 4px;
 }
 
 .modal {
