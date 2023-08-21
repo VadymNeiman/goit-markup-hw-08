@@ -3,7 +3,6 @@
     margin-bottom: 10px;
     text-align: center;
     font-size: 14px;
-   //  line-height: normal;
  }
  .advant__text {
    line-height: 1.71;
@@ -36,8 +35,6 @@
 //  @media screen and (min-width: 768px) and (max-width: 1199px) 
 @include mq(tablet-only) {
    .advant-list {
-      // display: flex;
-      // gap: 30px;
       flex-wrap: wrap;
    }
    .advant-list__item {
@@ -51,25 +48,3 @@
       padding-bottom: 0;
    } 
 }
-
-
-// .section_padding-bottom-no {
-//     padding-bottom: 0;
-//   } 
-//  .advant__subtitle {
-//     margin-bottom: 10px;
-//  }
-//  .advant-list {
-//     display: flex;
-//     gap: 30px;
-    
-//     &__icon {
-//       /* width: 270px; */
-//       height: 120px;
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//       background-color: var(--secondary-background-color,lightgrey);
-//       margin-bottom: 30px;
-//    }
-//  } 
