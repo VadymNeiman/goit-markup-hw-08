@@ -20,9 +20,11 @@
       background-position: center;
       background-size: cover;
 
-      @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+      @include mq(retina)
+      // @media (min-device-pixel-ratio: 2),
+      // (min-resolution: 192dpi),
+      // (min-resolution: 2dppx) 
+      {
           background-image: linear-gradient( rgba(47, 48, 58, 0.4),
                                              rgba(47, 48, 58, 0.4)), 
                              url(../images/herofoto-mobile@2x.jpg);
@@ -46,8 +48,9 @@
     margin-right: auto;
 }
 
-
-@media screen and (min-width: 768px) {
+@include mq(tablet)
+// @media screen and (min-width: 768px) 
+{
   .hero-section {    
     max-width: 1200px;
     background-image: linear-gradient( rgba(47, 48, 58, 0.4),
@@ -57,9 +60,11 @@
                                        rgba(47, 48, 58, 0.4)),
                       -webkit-image-set(url(../images/herofoto-tablet.webp) 1x); 
 
-      @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+      @include mq(retina)                
+      // @media (min-device-pixel-ratio: 2),
+      // (min-resolution: 192dpi),
+      // (min-resolution: 2dppx) 
+      {
         background-image: linear-gradient( rgba(47, 48, 58, 0.4),
                                             rgba(47, 48, 58, 0.4)), 
                           url(../images/herofoto-tablet@2x.jpg);
@@ -72,7 +77,9 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include mq(desktop)
+// @media screen and (min-width: 1200px) 
+{
   .hero-section {    
     max-width: 1600px;
     height: 600px;  
@@ -85,9 +92,11 @@
                                        rgba(47, 48, 58, 0.4)),
                       -webkit-image-set(url(../images/herofoto-desktop.webp) 1x); 
 
-      @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+      @include mq(retina)
+      // @media (min-device-pixel-ratio: 2),
+      // (min-resolution: 192dpi),
+      // (min-resolution: 2dppx) 
+      {
         background-image: linear-gradient( rgba(47, 48, 58, 0.4),
                                            rgba(47, 48, 58, 0.4)),  
                           url(../images/herofoto-desktop@2x.jpg);

@@ -10,7 +10,8 @@
     
 }
 
-@media screen and (max-width: 767px) {   
+// @media screen and (max-width: 767px)
+@include mq(mobile-only) {   
     .team__item:not(:last-child) {
        margin-bottom: 30px;
     }
@@ -25,7 +26,8 @@
     padding-top: 30px;
     padding-bottom: 24px;
 
-    @media screen and (min-width:1200px) {
+    // @media screen and (min-width:1200px)
+    @include mq(desktop) {
         padding-bottom: 30px;
     }
 }
@@ -47,7 +49,8 @@
     }
 
 
-@media screen and (min-width: 768px) {
+// @media screen and (min-width: 768px)
+@include mq(tablet) {
     .team {
         display: flex;
         gap: 30px;

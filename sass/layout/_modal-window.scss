@@ -17,13 +17,15 @@
       
    }
 
-   @media screen and (max-width: 479px) {
-      width: 100%;
+   // @media screen and (max-width: 479px)
+   @include mq(mobile-before) {
+      width: 90%;
       // min-width: 320px;
       
    }
 
-   @media screen and (min-width: 1200px) {
+   // @media screen and (min-width: 1200px)
+   @include mq(desktop) {
         min-height: 580px;
         width: 528px;
    }
@@ -97,10 +99,10 @@
 
   &::placeholder {
    font-size: 14px;
-   // font-size: 12px;
    color: rgba(117, 117, 117, 0.50);
 
-   @media screen and (min-width: 1200px) {
+   // @media screen and (min-width: 1200px)
+   @include mq(desktop) {
       font-size: 12px;
    }
   }
@@ -112,24 +114,22 @@
 }
 
 .modal__checkbox-text {
- position: relative;
- display: flex;
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   height: 24px;
+   padding-left: 36px;
+   font-size: 12px;
+   line-height: 1.4;
+   letter-spacing: 0.42px;
+   color: var(--second-text-color, grey);
+   margin-bottom: 30px;
 
-    flex-wrap: wrap;
-
- align-items: center;
- height: 24px;
- padding-left: 36px;
- font-size: 12px;
-//  font-size: 14px;
- line-height: 1.4;
- letter-spacing: 0.42px;
- color: var(--second-text-color, grey);
- margin-bottom: 30px;
-
- @media screen and (min-width: 1200px) {
-   font-size: 14px;
- }
+   //  @media screen and (min-width: 1200px)
+   @include mq(desktop) {
+      font-size: 14px;
+   }
 }
 
 %modal__checkbox-icon {
@@ -167,5 +167,4 @@
  display: block;
  margin-left: auto;
  margin-right: auto;
- /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }

@@ -1,29 +1,19 @@
-
-
-
 .clients {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 .clients__item {
-      // display: flex;
       width: 210px;
       height: 92px;
-      // justify-content: center;
-      // align-items: center;
-
-
       
-      @media screen and (max-width: 479px) {
+      // @media screen and (max-width: 479px)
+      @include mq(mobile-before) {     
          width: 100%;
          max-width: 210px;
          flex-basis: calc((100% - 1 * 30px) / 2);
       }
-            
-
-
-   }
+}
  
 .clients__item-link {
    display: flex;
@@ -47,14 +37,16 @@
 
 
 
-@media screen and (min-width: 768px) {
+// @media screen and (min-width: 768px)
+@include mq(tablet) {
    .clients__item {
       width: 226px;
       // flex-basis: calc((100% - 2 * 30px) / 3);
    }
 }
  
-@media screen and (min-width: 1200px) {
+// @media screen and (min-width: 1200px)
+@include mq(desktop) {
    .clients__item {
       width: 170px;
    }

@@ -12,7 +12,8 @@
     cursor: pointer;
     padding: 10px 24px;
 
-    @media screen and (min-width: 1200px) {
+//     @media screen and (min-width: 1200px) 
+    @include mq(desktop) {
      padding: 10px 32px;
     }
  
