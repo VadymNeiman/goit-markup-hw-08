@@ -1,8 +1,11 @@
 
  .advant__subtitle {
     margin-bottom: 10px;
-    text-align: center;
     font-size: 14px;
+
+    @include mq(mobile-only) {
+      text-align: center;
+    }
  }
  .advant__text {
    line-height: 1.71;
